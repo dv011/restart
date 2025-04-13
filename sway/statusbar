@@ -1,0 +1,6 @@
+!/usr/bin/env bash
+
+# A custom sway bar to show date and pomodoro duration.
+date_formatted=$(date "+%a %B %d | %r ")
+pomodoro_time=$(~/casa/work/scripts/pomodoro clock)
+echo $date_formatted '|' $pomodoro_time

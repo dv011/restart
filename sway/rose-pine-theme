@@ -1,0 +1,78 @@
+### Rosé Pine Theme for Sway ###
+
+# Colors
+set $base #191724
+# set $surface #1f1d2e
+set $surface #f2e9e1
+set $overlay #26233a
+set $text #e0def4
+set $muted #6e6a86
+set $accent #ea9a97
+# set $highlight #9ccfd8
+set $highlight #ebbcba
+# set $highlight #56949f
+set $secondary #f6c177
+
+# rose pine colors for testing
+# _nc = "#f8f0e7",
+# base = "#faf4ed",
+# surface = "#fffaf3",
+# overlay = "#f2e9e1",
+# muted = "#9893a5",
+# subtle = "#797593",
+# text = "#575279",
+# love = "#b4637a",
+# gold = "#ea9d34",
+# rose = "#d7827e",
+# pine = "#286983",
+# foam = "#56949f",
+# iris = "#907aa9",
+# leaf = "#6d8f89",
+# highlight_low = "#f4ede8",
+# highlight_med = "#dfdad9",
+# highlight_high = "#cecacd",
+# none = "NONE",
+
+# Background color for inactive, active, and urgent windows
+set $inactive $surface
+set $active $overlay
+set $urgent $accent
+
+# Borders
+set $border $surface
+set $focused-border $highlight
+set $urgent-border $accent
+
+# Workspace settings
+set $workspace-text-color $text
+set $workspace-bg-color $base
+set $workspace-border-color $surface
+set $focused-workspace-text-color $text
+set $focused-workspace-bg-color $highlight
+set $focused-workspace-border-color $highlight
+
+# Status bar
+# bar {
+#     colors {
+#         background $base
+#         statusline $text
+#         separator $muted
+
+#         focused_workspace $highlight $text $highlight
+#         active_workspace $surface $text $surface
+#         inactive_workspace $base $muted $base
+#         urgent_workspace $urgent $text $urgent
+#     }
+# }
+
+# Window borders
+client.focused          $active $highlight $highlight $text
+client.focused_inactive $inactive $border $border $muted
+client.unfocused        $inactive $border $border $muted
+client.urgent           $urgent $urgent-border $urgent-border $text
+client.placeholder      $inactive $border $border $muted
+
+# Gaps and borders
+gaps outer 5
+gaps inner 10
+for_window [class=".*"] border pixel 2

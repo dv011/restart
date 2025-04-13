@@ -1,0 +1,81 @@
+# [Created by task 3.0.2 11/6/2024 17:30:20]
+# Taskwarrior program configuration file.
+# For more documentation, see https://taskwarrior.org or try 'man task', 'man task-color',
+# 'man task-sync' or 'man taskrc'
+
+# Here is an example of entries that use the default, override and blank values
+#   variable=foo   -- By specifying a value, this overrides the default
+#   variable=      -- By specifying no value, this means no default
+#   #variable=foo  -- By commenting out the line, or deleting it, this uses the default
+
+# You can also refence environment variables:
+#   variable=$HOME/task
+#   variable=$VALUE
+
+# Use the command 'task show' to see all defaults and overrides
+
+# Files
+data.location=~/.config/task/.task/
+
+
+# To use the default location of the XDG directories,
+# move this configuration file from ~/.taskrc to ~/.config/task/taskrc and uncomment below
+
+#data.location=~/.local/share/task
+hooks.location=~/.config/task/hooks
+
+# Color theme (uncomment one to use)
+#include light-16.theme
+include light-256.theme
+#include dark-16.theme
+#include dark-256.theme
+#include dark-red-256.theme
+#include dark-green-256.theme
+#include dark-blue-256.theme
+#include dark-violets-256.theme
+#include dark-yellow-green.theme
+#include dark-gray-256.theme
+#include dark-gray-blue-256.theme
+#include solarized-dark-256.theme
+#include solarized-light-256.theme
+#include no-color.theme
+
+verbose=blank,footnote,label,new-id,affected,edit,special,project,sync,unwait
+
+# fixes tw-tui showing only one page at a time when I want to see all my tasks
+uda.taskwarrior-tui.task-report.next.filter=status:pending
+
+# context, tw configures this automatically
+context.config.read=+config
+context.config.write=+config
+context.next.read=+next
+context.next.write=+next
+context.inbox.read=+inbox
+context.inbox.write=+inbox
+context.spare_time.read=+spare_time
+context.spare_time.write=+spare_time
+context.deep_thought.read=+deep_thought
+context.deep_thought.write=+deep_thought
+context.security.read=+security
+context.security.write=+security
+context.man.read=+man
+context.man.write=+man
+context.dev_game.read=+dev_game
+context.dev_game.write=+dev_game
+context.dev_web.read=+dev_web
+context.dev_web.write=+dev_web
+context.dev.read=+dev
+context.dev.write=+dev
+context.dev_recreational.read=+dev_recreational
+context.dev_recreational.write=+dev_recreational
+context.config_nix.read=+config_nix
+context.config_nix.write=+config_nix
+context.config_nvim.read=+config_nvim
+context.config_nvim.write=+config_nvim
+context.dev_haskell.read=+dev_haskell
+context.dev_haskell.write=+dev_haskell
+context.project_current.read=+project_current
+context.project_current.write=+project_current
+context.project_future.read=+project_future
+context.project_future.write=+project_future
+context=config_nix
