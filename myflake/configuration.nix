@@ -609,12 +609,6 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
-  # playing around with stylix
-  stylix.autoEnable = false;
-  stylix.image = /home/dev/casa/work/background-images/omakub-rose-dawn.jpg;
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine-dawn.yaml";
-  # stylix.image = /home/dev/casa/work/background-images/waterfall.jpg;
-
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave

@@ -3,15 +3,10 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    stylix.url = "github:danth/stylix";
     nixvim.url = "github:nix-community/nixvim";
   };
 
-  outputs = {
-    nixpkgs,
-    stylix,
-    ...
-  } @ inputs: let
+  outputs = {nixpkgs, ...} @ inputs: let
     system = "x86_64-linux";
 
     pkgs = import nixpkgs {
@@ -28,7 +23,6 @@
 
         modules = [
           ./configuration.nix
-          stylix.nixosModules.stylix
         ];
       };
     };
