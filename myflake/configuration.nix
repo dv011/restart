@@ -163,7 +163,7 @@
     anki
 
     # pixel editor
-    aseprite
+    # aseprite
 
     # system/process info
     btop
