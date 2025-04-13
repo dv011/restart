@@ -3,9 +3,9 @@
 gsettings set org.gnome.desktop.input-sources xkb-options "['caps:swapescape']"
 mv ./myflake/ ~/.config/
 sudo mv /etc/nixos/hardware-configuration.nix ~/.config/myflake/
-ln -s ~/.config/myflake/hardware-configuration.nix /etc/nixos/
-rm /etc/nixos/configuration.nix
-ln -s ~/.config/myflake/configuration.nix /etc/nixos/
+sudo ln -s ~/.config/myflake/hardware-configuration.nix /etc/nixos/
+sudo rm /etc/nixos/configuration.nix
+sudo ln -s ~/.config/myflake/configuration.nix /etc/nixos/
 
 mv ./sway/ ~/.config/
 mv ./nvim/ ~/.config/
